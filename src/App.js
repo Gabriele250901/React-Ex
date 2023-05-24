@@ -1,9 +1,21 @@
+import React from 'react';
 import './App.css';
+import { Hello } from './components/exercise1/hello';
+import { Message } from './components/exercise1/message';
+import {  Welcome } from './components/exercise2/exercise2';
+
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Hello/>
+      <Message/>
+
+      <Welcome age ="21" name={<strong>Gabriele</strong>}/>
+    </div>
   );
 }
 
 export default App;
+
+// ogni volta che mi correggerai un esercizio togliero` la classe dall'app in modo da non fare casini 
