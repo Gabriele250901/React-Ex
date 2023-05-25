@@ -3,6 +3,7 @@ import './App.css';
 import { Hello } from './components/exercise1/hello';
 import { Message } from './components/exercise1/message';
 import {  Welcome } from './components/exercise2/exercise2';
+import { Age } from './components/exercise6/exercise6';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Hello/>
       <Message/>
 
-      <Welcome age ="21" name={<strong>Gabriele</strong>}/>
+      <Welcome age="23"  name={<strong>Gabriele</strong>}/>
+      
     </div>
   );
 }

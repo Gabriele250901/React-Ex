@@ -5,8 +5,11 @@ export class Age extends React.Component {
   render() {
     return (
       <div>
-        <Welcome>Your age is {this.props.age}</Welcome>
+        <p>Your age is {this.props.data}</p>
       </div>
     );
   }
 }
+
+
+// guarda anche il file exercise2 ho dovuto modificare anche quello 
