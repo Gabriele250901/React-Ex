@@ -71,3 +71,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Exercise7
 Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18.
+
+Exercise8
+Modify the Welcome component so that the Age component is rendered only if the age prop is present.
+
+Exercise9
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65.
+
+Exercise9
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65 and the name prop is equal to "John".
