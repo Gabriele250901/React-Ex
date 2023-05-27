@@ -92,3 +92,6 @@ Modify the Counter component so that the initial value of the counter, the incre
 
 Exercise14
 Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop.
+
+Exercise15
+Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required? Il constructor e` required perche' nella documentazione continuano a lasciarlo quindi credo ne abbia bisogno, pero' l'operazione di did mount va eseguita fuori.
