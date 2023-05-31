@@ -14,8 +14,12 @@ function App() {
       <Hello/>
       <Message/>
 
-      <Welcome  name="John" age="25"/>
+
+      <Welcome age="19"  name={<strong>Gabriele</strong>}/>
+
+    
       <Counter/>
+
       
     </div>
   );
