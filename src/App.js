@@ -14,7 +14,7 @@ function App() {
       <Hello/>
       <Message/>
 
-      <Welcome  name="John"/>
+      <Welcome  name="John" age="25"/>
       <Counter/>
       
     </div>
