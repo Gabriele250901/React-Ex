@@ -3,12 +3,12 @@ import { Age } from "../exercise6/exercise6";
 
 export class Welcome extends React.Component {
   render() {
-    const age = this.props.age
+    
     return (
       <div>
         <p>Welcome ,{this.props.name}</p>
         {/* <p>Your age is {this.props.age}</p> */}
-        <Age data={age >= 18 ? age : ""} />
+        {this.props.age > 18 ? <Age age={this.props.age}/> : <p>Your age is invalid</p>}
       </div>
     );
   }
