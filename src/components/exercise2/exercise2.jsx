@@ -3,12 +3,11 @@ import { Age } from "../exercise6/exercise6";
 
 export class Welcome extends React.Component {
   render() {
-    
     return (
       <div>
         <p>Welcome ,{this.props.name}</p>
         {/* <p>Your age is {this.props.age}</p> */}
-        <Age/>
+        {this.props.age && <Age age={this.props.age} />}
       </div>
     );
   }
