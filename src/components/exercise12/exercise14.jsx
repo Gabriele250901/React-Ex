@@ -10,7 +10,7 @@ export class CounterDisplay extends React.Component{
     render(){
         return(
             <div>
-                <Counter  initialValue={10} timeout={2000} increment={3}/>
+                <h1>Count:{this.props.count}</h1>
             </div>
         )
     }
