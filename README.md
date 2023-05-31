@@ -71,3 +71,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Exercise7
 Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18.
+
+Exercise8
+Modify the Welcome component so that the Age component is rendered only if the age prop is present.
+
+Exercise9
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65.
+
+Exercise9
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65 and the name prop is equal to "John".
+
+Exercise11
+Modify the Age component so that the "Your age is " message is rendered only if the age prop is greater than 18. Otherwise render the "You are very young!" message.
+
+Exercise12
+Create a Counter class component with an internal state containing a count property, initialized to 0. The Counter component should render the count property within an h1 tag, and the count property should be incremented by 1 every second;
+
+Exercise13
+Modify the Counter component so that the initial value of the counter, the increment interval and the increment amount are passed as props to the component.
+
+Exercise14
+Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop.
+
+Exercise15
+Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required? Il constructor e` required perche' nella documentazione continuano a lasciarlo quindi credo ne abbia bisogno, pero' l'operazione di did mount va eseguita fuori.
