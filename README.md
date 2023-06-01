@@ -92,3 +92,9 @@ Modify the Counter component so that the initial value of the counter, the incre
 
 Exercise14
 Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop.
+
+Exercise15
+Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required?
+
+Exercise16
+Create a ClickCounter class component that increments a counter every time a user clicks on a button. Render both the current value of the counter and the button within the ClickCounter component.
