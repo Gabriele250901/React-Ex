@@ -5,6 +5,7 @@ export class Login extends React.Component {
   state = {
     username: "",
     password: "",
+    country: "",
   };
   handleChangingSomething = (event) => {
     const value = event.target.value;
@@ -20,9 +21,16 @@ export class Login extends React.Component {
     const { username, password } = this.state;
     onLogin({ username, password });
   };
+  handleReset = () => {
+    this.setState({
+      username: "",
+      password: "",
+      country: ""
+    });
+  };
 
   render() {
-    const isDisabled = !this.state.username || !this.state.password;
+    const isDisabled = !this.state.username || !this.state.password || !this.state.country;
     return (
       <div>
         <form>
@@ -38,9 +46,16 @@ export class Login extends React.Component {
             value={this.state.password}
             onChange={this.handleChangingSomething}
           />
+          <input
+            type="text"
+            name="country"
+            value={this.state.country}
+            onChange={this.handleChangingSomething}
+          />
           <button onClick={this.onLogin} disabled={isDisabled}>
             Login
           </button>
+          <button onClick={this.handleReset}>Reset</button>
         </form>
       </div>
     );
