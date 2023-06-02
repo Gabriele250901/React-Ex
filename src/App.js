@@ -7,6 +7,7 @@ import { Age } from './components/exercise6/exercise6';
 import { Counter } from './components/exercise12/exercise12';
 import { CounterDisplay } from './components/exercise12/exercise14';
 import { ClickCounter } from './components/exercise12/exercise16';
+import { ClickTracker } from './components/exercise17/exercise17';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Message/>
 
       <Welcome  name="John"/>
-      <ClickCounter/>
+     
+      <ClickTracker/>
       
     </div>
   );
