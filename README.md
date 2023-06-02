@@ -114,3 +114,7 @@ Add a "reset" button to the Login component that clears the content of all three
 
 Exercise21
 Implement an UncontrolledLogin component that implements all the operations of the Login component, but does so using uncontrolled components.
+
+Exercise22
+Modify the UncontrolledLogin component so that the username input is automatically focused when the component renders the first time.
+

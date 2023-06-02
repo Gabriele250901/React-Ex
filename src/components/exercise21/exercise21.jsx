@@ -12,6 +12,9 @@ export class UncontrolledLogin extends React.Component {
     
     onLogin({ username, password});
   };
+  componentDidMount(){
+    this.usernameRef.current.focus();
+  }
 
   render() {
     const isDisabled = !this.usernameRef.current  || !this.passwordRef.current ;
