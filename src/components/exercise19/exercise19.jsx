@@ -1,4 +1,4 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+
 import React from "react";
 
 export class Login extends React.Component {
@@ -55,7 +55,7 @@ export class Login extends React.Component {
           <button onClick={this.onLogin} disabled={isDisabled}>
             Login
           </button>
-          <button onClick={this.handleReset}>Reset</button>
+          <button onClick={this.handleReset} type="reset">Reset</button>
         </form>
       </div>
     );
