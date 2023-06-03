@@ -21,6 +21,9 @@ export class TodoList extends React.Component {
         this.setState({items: this.state.items.concat(obj)})
         this.setState({value:""})
     }
+    this.setState({
+        input: "",
+    })
   }
  
  
