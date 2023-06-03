@@ -123,3 +123,6 @@ Create a TodoList component that renders a ul tag with a li tag for each item co
 
 Exercise24
 Modify the TodoList component so that the input clears every time a Todo is added to the items array.
+
+Exercise25
+Modify the TodoList by adding a "reset" button that clears the items array when clicked.
