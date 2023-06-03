@@ -12,40 +12,54 @@ export class TodoList extends React.Component {
     });
   };
 
-  onAdd = ()=>{
+  onAdd = () => {
     const obj = {
-        name : this.state.input,
-        id: Date.now()
-    }
-    if(this.state.input !== ""){
-        this.setState({items: this.state.items.concat(obj)})
-        this.setState({value:""})
+      name: this.state.input,
+      id: Date.now(),
+    };
+    if (this.state.input !== "") {
+      this.setState({ items: this.state.items.concat(obj) });
+      this.setState({ value: "" });
     }
     this.setState({
-        input: "",
-    })
-  }
+      input: "",
+    });
+  };
   resetTodo = () => {
     this.setState({
-        items: []
+      items: [],
+    });
+  };
+
+  deleteTodo = (itemId) => {
+    this.setState({
+        items: [...this.state.items].filter((id)=> id.id !== itemId),
     })
   }
- 
- 
+
+  
 
   render() {
-    const myList = this.state.items.map(todo =>(
-        <li>{todo.name}</li>
+    const myList = this.state.items.map((todo) => (
+      <li key={todo.id}>
+        {todo.name}
+        <button onClick={()=> this.deleteTodo(todo.id)}>&times;</button>
+      </li>
     ));
     return (
       <div>
         <h1>Todo List!</h1>
-        <input type="text" value={this.state.input} onChange={this.inputChange} />
+        <input
+          type="text"
+          value={this.state.input}
+          onChange={this.inputChange}
+        />
         <button onClick={this.onAdd}>Add</button>
-        <ul>
-            {myList}
-        </ul>
-        <button type="reset" onClick={this.resetTodo}> Reset Todo</button>
+        <ul>{myList}</ul>
+        <button type="reset" onClick={this.resetTodo}>
+          {" "}
+          Reset Todo
+        </button>
       </div>
     );
   }
