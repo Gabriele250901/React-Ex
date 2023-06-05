@@ -15,11 +15,9 @@ export class Login extends React.Component {
     });
   };
 
-  onLogin = () => {
-    const onLogin = this.props;
-    const { username, password } = this.state;
-    onLogin({ username, password });
-  };
+ handleLogin = () => {
+  this.props.onClick(this.state)
+ }
 
   render() {
     const isDisabled = !this.state.username || !this.state.password;
@@ -38,7 +36,7 @@ export class Login extends React.Component {
             value={this.state.password}
             onChange={this.handleChangingSomething}
           />
-          <button onClick={this.onLogin} disabled={isDisabled}>
+          <button onClick={this.handleLogin} disabled={isDisabled}>
             Login
           </button>
         </form>
