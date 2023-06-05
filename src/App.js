@@ -13,15 +13,30 @@ import { Login } from "./components/exercise19/exercise19";
 import { UncontrolledLogin } from "./components/exercise21/exercise21";
 import { TodoList } from "./components/exercise23/exercise23";
 
-
-
 function App() {
   return (
     <div>
       <Hello />
       <Message />
 
-      <TodoList/>
+      <TodoList 
+        render={(items, deleteTodo) => {
+          
+          return (
+            <div>
+              {items.map((todo) => (
+                <li key={todo.id} >
+                  {todo.name}
+                  <button onClick={() => deleteTodo(todo.id)}>
+                    &times;
+                  </button>
+                </li>
+              ))}
+              
+            </div>
+          );
+        }}
+      />
 
       <ClickTracker />
     </div>

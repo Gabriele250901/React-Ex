@@ -33,19 +33,11 @@ export class TodoList extends React.Component {
 
   deleteTodo = (itemId) => {
     this.setState({
-        items: [...this.state.items].filter((id)=> id.id !== itemId),
-    })
-  }
-
-  
+      items: [...this.state.items].filter((id) => id.id !== itemId),
+    });
+  };
 
   render() {
-    const myList = this.state.items.map((todo) => (
-      <li key={todo.id}>
-        {todo.name}
-        <button onClick={()=> this.deleteTodo(todo.id)}>&times;</button>
-      </li>
-    ));
     return (
       <div>
         <h1>Todo List!</h1>
@@ -55,7 +47,12 @@ export class TodoList extends React.Component {
           onChange={this.inputChange}
         />
         <button onClick={this.onAdd}>Add</button>
-        <ul>{myList}</ul>
+        <ul>
+          {this.props.render(
+            this.state.items,
+            this.deleteTodo
+          )}
+        </ul>
         <button type="reset" onClick={this.resetTodo}>
           {" "}
           Reset Todo
@@ -64,3 +61,11 @@ export class TodoList extends React.Component {
     );
   }
 }
+
+// {this.state.items.map((todo) => (
+//     <li key={todo.id}>
+//       {todo.name}
+//       <button onClick={() => this.deleteTodo(todo.id)}>&times;</button>
+//     </li>
+//   ))}
+//   ;
