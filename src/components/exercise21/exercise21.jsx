@@ -6,12 +6,10 @@ export class UncontrolledLogin extends React.Component {
   formRef = createRef();
   handleLogin = (event) => {
     event.preventDefault();
-
-    const { onLogin } = this.props;
     const username = this.usernameRef.current.value;
     const password = this.passwordRef.current.value;
 
-    onLogin({ username, password });
+    
   };
 
   tryingDisabled = () => {
@@ -25,18 +23,18 @@ export class UncontrolledLogin extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleLogin} ref={this.formRef}>
+        <form onSubmit={this.handleLogin} ref={this.formRef} onChange={this.tryingDisabled}>
           <h1>Uncontrolled Login</h1>
           <input
             type="text"
             name="username"
-            onChange={this.tryingDisabled}
+            
             ref={this.usernameRef}
           />
           <input
             type="password"
             name="password"
-            onChange={this.tryingDisabled}
+            
             ref={this.passwordRef}
           />
 
