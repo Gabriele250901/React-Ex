@@ -1,12 +1,29 @@
 import React from "react";
+import { LanguageContext } from "./exercise28";
 
-
-export class DisplayLanguage extends React.Component{
-    render(){
-        return(
-            <div>
+const strings = {
+  en: {
+    LANGUAGE_SEL: "The language selected is: English ",
+  },
+  it: {
+    LANGUAGE_SEL: "La lingua selezionata e': Italiano",
+  },
+};
+export class DisplayLanguage extends React.Component {
+  render() {
+    return (
+      
+        <LanguageContext.Consumer>
+          {(language) => {
+            return (
+              <h1>
+                {strings[language].LANGUAGE_SEL}
                 
-            </div>
-        )
-    }
+              </h1>
+            );
+          }}
+        </LanguageContext.Consumer>
+      
+    );
+  }
 }

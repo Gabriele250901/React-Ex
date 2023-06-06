@@ -33,7 +33,7 @@ import { DisplayLanguage } from "./components/exercise28/exercise28pt2";
       <div>
         <select value={this.state.language} onChange={this.changingLanguage}>
           <option value="en">English</option>
-          <option value="It">Italiano</option>
+          <option value="it">Italiano</option>
         </select>
         <LanguageContext.Provider value={this.state.language}>
           <DisplayLanguage/>
