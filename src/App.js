@@ -14,32 +14,17 @@ import { UncontrolledLogin } from "./components/exercise21/exercise21";
 import { TodoList } from "./components/exercise23/exercise23";
 import { LanguageContext } from "./components/exercise28/exercise28";
 import { DisplayLanguage } from "./components/exercise28/exercise28pt2";
+import { ClickCounterFunc } from "./components/exercise30/exercise30";
 
  class App extends React.Component {
-  state={
-    language: "en"
-  }
-  changingLanguage = (event)=> {
-    this.setState({
-      language: event.target.value
-    })
-    
-  }
-  componentDidUpdate(){
-    console.log(this.state)
-  }
+
   render() {
     return (
       <div>
-        <select value={this.state.language} onChange={this.changingLanguage}>
-          <option value="en">English</option>
-          <option value="it">Italiano</option>
-        </select>
-        <LanguageContext.Provider value={this.state.language}>
-          <DisplayLanguage/>
-        </LanguageContext.Provider>
+       
         <Hello />
         <Message />
+        <ClickCounterFunc/>
       </div>
     );
   }
