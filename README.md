@@ -141,3 +141,6 @@ Consume the LanguageContext within the DisplayLanguage component by using the co
 
 Exercise30
 Rewrite the ClickCounter component as a function component, and use the useState hook to track the state of the counte
+
+Exercise31
+Rewrite the Login component as a function component, and use the useState hook to track the state of the username, password and remember inputs. Tip: you can use useState more than once.

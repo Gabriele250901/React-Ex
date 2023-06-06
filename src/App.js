@@ -15,6 +15,7 @@ import { TodoList } from "./components/exercise23/exercise23";
 import { LanguageContext } from "./components/exercise28/exercise28";
 import { DisplayLanguage } from "./components/exercise28/exercise28pt2";
 import { ClickCounterFunc } from "./components/exercise30/exercise30";
+import { LoginFunc } from "./components/exercise31/exercise31";
 
  class App extends React.Component {
 
@@ -24,7 +25,7 @@ import { ClickCounterFunc } from "./components/exercise30/exercise30";
        
         <Hello />
         <Message />
-        <ClickCounterFunc/>
+        <LoginFunc/>
       </div>
     );
   }
