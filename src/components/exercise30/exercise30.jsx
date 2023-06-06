@@ -24,4 +24,4 @@ export function ClickCounterFunc({initialValue = 0}){
     )
 }
 
-// non era richiesto un secondo bottono li ho aggiunti per esercitarmi 
+// non era richiesto un secondo bottone li ho aggiunti per esercitarmi 
