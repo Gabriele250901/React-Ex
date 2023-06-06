@@ -16,6 +16,13 @@ export function LoginFunc() {
       };
     });
   }
+  function handleResetInput() {
+    setLogin({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  }
   return (
     <div>
       <h1>My form</h1>
@@ -38,6 +45,9 @@ export function LoginFunc() {
           checked={login.remember}
           onChange={handleInput}
         />
+        <button type="reset" onClick={handleResetInput}>
+          Reset
+        </button>
       </form>
     </div>
   );
