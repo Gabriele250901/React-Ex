@@ -20,6 +20,14 @@ export class UncontrolledLogin extends React.Component {
       btnD.disabled = true;
     }
   };
+  componentDidMount(){
+    const btnD = document.querySelector("#provaD");
+    if (this.usernameRef.current.value && this.passwordRef.current.value) {
+      btnD.disabled = false;
+    } else {
+      btnD.disabled = true;
+    }
+  }
   render() {
     return (
       <div>
