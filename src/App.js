@@ -16,6 +16,7 @@ import { LanguageContext } from "./components/exercise28/exercise28";
 import { DisplayLanguage } from "./components/exercise28/exercise28pt2";
 import { ClickCounterFunc } from "./components/exercise30/exercise30";
 import { LoginFunc } from "./components/exercise31/exercise31";
+import { CounterFunc } from "./components/exercise33/exercise33";
 
 function App() {
   function onCounterChange(){
@@ -25,7 +26,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <ClickCounterFunc />
+      <CounterFunc/>
     </div>
   );
 }
