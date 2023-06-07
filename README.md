@@ -144,3 +144,6 @@ Rewrite the ClickCounter component as a function component, and use the useState
 
 Exercise31
 Rewrite the Login component as a function component, and use the useState hook to track the state of the username, password and remember inputs. Tip: you can use useState more than once.
+
+Exercise32
+Add a side effect to the ClickCounter component from useState 01 that calls a onCounterChange function with the current value of the counter every time value of the counter changes. The function should be received as a prop. L'esercizio si trova nella cartella exercise30

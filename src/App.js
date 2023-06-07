@@ -17,19 +17,18 @@ import { DisplayLanguage } from "./components/exercise28/exercise28pt2";
 import { ClickCounterFunc } from "./components/exercise30/exercise30";
 import { LoginFunc } from "./components/exercise31/exercise31";
 
- class App extends React.Component {
-
-  render() {
-    return (
-      <div>
-       
-        <Hello />
-        <Message />
-        <LoginFunc/>
-      </div>
-    );
+function App() {
+  function onCounterChange(){
+    
   }
+  return (
+    <div>
+      <Hello />
+      <Message />
+      <ClickCounterFunc />
+    </div>
+  );
 }
 
-export default App
+export default App;
 // ogni volta che mi correggerai un esercizio togliero` la classe dall'app in modo da non fare casini

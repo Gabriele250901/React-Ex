@@ -1,27 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { SideEffect } from "./exercise32";
 
+export function ClickCounterFunc({ props }) {
+  const [counter, setCounter] = useState(0);
 
-export function ClickCounterFunc({initialValue = 0}){
-    const [ counter, setCounter] = useState(initialValue);
+  function incrementCount() {
+    setCounter(counter + 1);
+  }
+  function decreaseCount() {
+    setCounter(counter - 1);
+  }
+  function resetCount() {
+    setCounter(0);
+  } 
 
-    function incrementCount(){
-        setCounter(counter + 1)
-    }
-    function decreaseCount(){
-        setCounter(counter-1)
-    }
-    function resetCount(){
-        setCounter(initialValue)
-    }
+  function onCounterChange(){
+    console.log(`The counter is ${counter}`)
+  }
+  
 
-    return(
-        <div>
-            <h1>Counter: {counter}</h1>
-            <button onClick={incrementCount}>Increase!!!</button>
-            <button onClick={decreaseCount}>Decrease!</button>
-            <button onClick={resetCount}>Reset!</button>
-        </div>
-    )
+  
+
+  return (
+    <div>
+      <SideEffect incrementCount={incrementCount} decreaseCount={decreaseCount} resetCount={resetCount} counter={counter} 
+      counterChange={onCounterChange}/>
+    </div>
+  );
 }
 
-// non era richiesto un secondo bottone li ho aggiunti per esercitarmi 
+// non era richiesto un secondo bottone li ho aggiunti per esercitarmi
