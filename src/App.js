@@ -4,6 +4,7 @@ import { Hello } from "./components/exercise1/hello";
 import { Message } from "./components/exercise1/message";
 
 import { GitHubUser } from "./components/exercise34/exercise";
+import { GitHubUserList } from "./components/exercise35/exercise35";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <GitHubUser username="gabriele250901"/>
+      <GitHubUserList/>
     </div>
   );
 }
