@@ -4,49 +4,40 @@ export class UncontrolledLogin extends React.Component {
   usernameRef = createRef();
   passwordRef = createRef();
   formRef = createRef();
+  btnRef = createRef();
   handleLogin = (event) => {
     event.preventDefault();
     const username = this.usernameRef.current.value;
     const password = this.passwordRef.current.value;
-
-    
   };
 
   tryingDisabled = () => {
-    const btnD = document.querySelector("#provaD");
     if (this.usernameRef.current.value && this.passwordRef.current.value) {
-      btnD.disabled = false;
+      this.btnRef.current.disabled = false;
     } else {
-      btnD.disabled = true;
+      this.btnRef.current.disabled = true;
     }
   };
-  componentDidMount(){
-    const btnD = document.querySelector("#provaD");
+  componentDidMount() {
     if (this.usernameRef.current.value && this.passwordRef.current.value) {
-      btnD.disabled = false;
+      this.btnRef.current.disabled = false;
     } else {
-      btnD.disabled = true;
+      this.btnRef.current.disabled = true;
     }
   }
   render() {
     return (
       <div>
-        <form onSubmit={this.handleLogin} ref={this.formRef} onChange={this.tryingDisabled}>
+        <form
+          onSubmit={this.handleLogin}
+          ref={this.formRef}
+          onChange={this.tryingDisabled}
+        >
           <h1>Uncontrolled Login</h1>
-          <input
-            type="text"
-            name="username"
-            
-            ref={this.usernameRef}
-          />
-          <input
-            type="password"
-            name="password"
-            
-            ref={this.passwordRef}
-          />
+          <input type="text" name="username" ref={this.usernameRef} />
+          <input type="password" name="password" ref={this.passwordRef} />
 
-          <button type="submit" id="provaD">
+          <button type="submit" ref={this.btnRef}>
             Login
           </button>
           <button type="reset">Reset</button>
