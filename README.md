@@ -151,3 +151,7 @@ Add a side effect to the ClickCounter component from useState 01 that calls a on
 
 Exercise33 
 Rewrite the Counter component as a function component and add a side effect that initializes the interval as soon as the component renders, and clears it when the component unmounts.
+
+
+Exercise34
+Create a GithubUser component that fetches the data of the username passed as a prop, and renders some of the data within a div tag. The API to query is https://api.github.com/users/${username}
