@@ -14,7 +14,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <LoginFunc/>
+      <GitHubUser username="gabriele250901"/>
     </div>
   );
 }
