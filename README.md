@@ -159,3 +159,6 @@ Create a GithubUser component that fetches the data of the username passed as a 
 
 Exercise35
 Create a GithubUserList component that maintains an array of usernames, showing a GithubUser component for each username entered. The usernames should be added to the array using an input field and a button.
+
+Exercise36
+Create a custom hook useCounter that keeps track of the state of a counter, and returns the current value of the counter as well as three functions to increment, decrement and reset the counter.(L'esercizio lo trovi nella cartella exercise30 ,file exercise30)

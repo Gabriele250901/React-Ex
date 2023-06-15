@@ -5,6 +5,7 @@ import { Message } from "./components/exercise1/message";
 
 import { GitHubUser } from "./components/exercise34/exercise";
 import { GitHubUserList } from "./components/exercise35/exercise35";
+import { ClickCounterFunc } from "./components/exercise30/exercise30";
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <GitHubUserList/>
+      <ClickCounterFunc/>
     </div>
   );
 }

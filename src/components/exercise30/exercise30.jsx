@@ -1,30 +1,48 @@
 import { useEffect, useState } from "react";
 import { SideEffect } from "./exercise32";
 
-export function ClickCounterFunc({ props }) {
-  const [counter, setCounter] = useState(0);
+function useCounter(){
+  const [counter, setCounter] = useState(0)
 
   function incrementCount() {
     setCounter(counter + 1);
   }
+
+   
   function decreaseCount() {
     setCounter(counter - 1);
   }
+
   function resetCount() {
     setCounter(0);
   } 
 
-  function onCounterChange(){
-    console.log(`The counter is ${counter}`)
+  return {
+    counter : counter,
+    onIncrement: incrementCount,
+    onDecrement: decreaseCount,
+    onReset: resetCount,
+
   }
-  
+
+}
+
+
+
+export function ClickCounterFunc({ props }) {
+      const {counter , onDecrement , onReset, onIncrement} = useCounter()
+
+
+ 
 
   
 
   return (
     <div>
-      <SideEffect incrementCount={incrementCount} decreaseCount={decreaseCount} resetCount={resetCount} counter={counter} 
-      counterChange={onCounterChange}/>
+      <h2>Counter: {counter}</h2>
+      <button onClick={onIncrement}>Increment</button>
+      <button onClick={onDecrement}>Decrease</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 }
