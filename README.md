@@ -162,3 +162,8 @@ Create a GithubUserList component that maintains an array of usernames, showing 
 
 Exercise36
 Create a custom hook useCounter that keeps track of the state of a counter, and returns the current value of the counter as well as three functions to increment, decrement and reset the counter.(L'esercizio lo trovi nella cartella exercise30 ,file exercise30)
+
+
+Exercise37
+Create a custom hook that keeps track of the state of a controlled form with the username and password inputs, and returns the current value of the inputs as well as an event handler to update either input.
+(A Differenza dell'esercizio prima, qui il custom hook l'ho creato completamente a parte invece che crearlo sopra , per poi esportalo , il custom hook si trova nella cartella 37, mentre il login cambiato nella cartella 31.)

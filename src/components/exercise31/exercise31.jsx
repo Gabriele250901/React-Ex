@@ -1,28 +1,8 @@
 import { useState } from "react";
+import { useLogin } from "../exercise37/exercise37";
 
 export function LoginFunc() {
-  const [login, setLogin] = useState({
-    username: "",
-    password: "",
-    remember: false,
-  });
-  function handleInput(event) {
-    const { name, type, value, checked } = event.target;
-
-    setLogin((login) => {
-      return {
-        ...login,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  }
-  function handleResetInput() {
-    setLogin({
-      username: "",
-      password: "",
-      remember: false,
-    });
-  }
+  const {login, inputChange , resetInput} =useLogin()
   return (
     <div>
       <h1>My form</h1>
@@ -31,21 +11,21 @@ export function LoginFunc() {
           type="text"
           name="username"
           value={login.username}
-          onChange={handleInput}
+          onChange={inputChange}
         />
         <input
           type="password"
           name="password"
           value={login.password}
-          onChange={handleInput}
+          onChange={inputChange}
         />
         <input
           type="checkbox"
           name="remember"
           checked={login.remember}
-          onChange={handleInput}
+          onChange={inputChange}
         />
-        <button type="reset" onClick={handleResetInput}>
+        <button type="reset" onClick={resetInput}>
           Reset
         </button>
       </form>
