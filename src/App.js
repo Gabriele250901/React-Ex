@@ -11,6 +11,7 @@ import { CarDetails } from "./components/exercise40/exercise40";
 import { LanguageContext } from "./components/exercise41/LanguageContext";
 import { DisplayLanguage1 } from "./components/exercise41/execise41";
 import { CallBackCounter } from "./components/exercise42/exercise42";
+import { FilteredList } from "./components/exercise43/exercise43";
 
 function App() {
  
@@ -18,7 +19,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <CallBackCounter/>
+      <FilteredList/>
     </div>
   );
 }
