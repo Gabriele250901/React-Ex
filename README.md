@@ -176,3 +176,6 @@ Extract the logic to fetch a Github user's data from the GithubUser component in
 
 Exercise39
 Modify the useGithubUser hook to return the function to fetch the data of a Github user, along with the data of the user and the error and loading states. (sempre cartella 38 per il custom hook e cartella 34 per esercizio )
+
+Exercise40
+Create a CarDetails uncontrolled form that uses the HTML Form API to allow the user to insert details about a car, such as the model, the year and the color. Allow the form to receive a initialData prop that contains the default values of each input, and reset the form every time the initialData value changes.

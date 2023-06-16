@@ -7,6 +7,7 @@ import { GitHubUser } from "./components/exercise34/exercise";
 import { GitHubUserList } from "./components/exercise35/exercise35";
 import { ClickCounterFunc } from "./components/exercise30/exercise30";
 import { LoginFunc } from "./components/exercise31/exercise31";
+import { CarDetails } from "./components/exercise40/exercise40";
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <GitHubUser username="gabriele250901"/>
+      <CarDetails/>
     </div>
   );
 }
