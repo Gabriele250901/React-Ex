@@ -182,3 +182,6 @@ Create a CarDetails uncontrolled form that uses the HTML Form API to allow the u
 
 Exercise41
 Rewrite the DisplayLanguage component from Context 02 to be a function component, and access the LanguageContext through the useContext hook.
+
+Exercise42
+Modify the useCounter custom hook from Custom Hooks 01 to use the useCallback to memoize the functions used to increment, decrement and reset the counter.

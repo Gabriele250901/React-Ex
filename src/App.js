@@ -10,25 +10,15 @@ import { LoginFunc } from "./components/exercise31/exercise31";
 import { CarDetails } from "./components/exercise40/exercise40";
 import { LanguageContext } from "./components/exercise41/LanguageContext";
 import { DisplayLanguage1 } from "./components/exercise41/execise41";
+import { CallBackCounter } from "./components/exercise42/exercise42";
 
 function App() {
-  const [language, setLanguage] = useState("en")
-
-
-  function handleChangeLanguage(event){
-    setLanguage(event.target.value)
-  }
+ 
   return (
     <div>
       <Hello />
       <Message />
-      <select value={language} onChange={handleChangeLanguage}>
-        <option value="en">English</option>
-        <option value="it">Italiano</option>
-      </select>
-      <LanguageContext.Provider value={language}>
-        <DisplayLanguage1/>
-      </LanguageContext.Provider>
+      <CallBackCounter/>
     </div>
   );
 }
