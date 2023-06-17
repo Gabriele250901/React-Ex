@@ -12,18 +12,23 @@ import { LanguageContext } from "./components/exercise41/LanguageContext";
 import { DisplayLanguage1 } from "./components/exercise41/execise41";
 import { CallBackCounter } from "./components/exercise42/exercise42";
 import { FilteredList } from "./components/exercise43/exercise43";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { ShowGitHubUser } from "./components/exercise45/Exercise45";
-
 
 function App() {
   return (
     <div>
-      <Hello />
       <Message />
+      <Link to="/counter">Return to counter</Link>
+      <hr />
+      <Link to="/users/:username">Insert username</Link>
+      <hr />
+      <Link to="/">Home Page</Link>
+
       <Routes>
+        <Route path="/" element={<Hello />} />
         <Route path="counter" element={<CallBackCounter />} />
-        <Route path="users/:username" element={<ShowGitHubUser/>}/>
+        <Route path="users/:username" element={<ShowGitHubUser />} />
       </Routes>
     </div>
   );

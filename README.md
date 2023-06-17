@@ -195,3 +195,6 @@ Add a new Route to the /counter path that renders the Counter component,
 
 Exercise45
 Add a new Route to the users/:username path that renders a ShowGithubUser component that receives the username as a path parameter and renders the GithubUser component by passing it the received username.
+
+Exercise46
+Add three Links within the main App component and use them to navigate to all three routes (tutto svolto in app).
