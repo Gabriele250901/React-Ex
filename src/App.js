@@ -12,14 +12,16 @@ import { LanguageContext } from "./components/exercise41/LanguageContext";
 import { DisplayLanguage1 } from "./components/exercise41/execise41";
 import { CallBackCounter } from "./components/exercise42/exercise42";
 import { FilteredList } from "./components/exercise43/exercise43";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
- 
   return (
     <div>
       <Hello />
       <Message />
-      <FilteredList/>
+      <Routes>
+        <Route path="counter" element={<CallBackCounter />} />
+      </Routes>
     </div>
   );
 }
