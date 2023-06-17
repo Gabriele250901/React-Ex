@@ -13,6 +13,8 @@ import { DisplayLanguage1 } from "./components/exercise41/execise41";
 import { CallBackCounter } from "./components/exercise42/exercise42";
 import { FilteredList } from "./components/exercise43/exercise43";
 import { Route, Routes } from "react-router-dom";
+import { ShowGitHubUser } from "./components/exercise45/Exercise45";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Message />
       <Routes>
         <Route path="counter" element={<CallBackCounter />} />
+        <Route path="users/:username" element={<ShowGitHubUser/>}/>
       </Routes>
     </div>
   );

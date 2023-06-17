@@ -191,3 +191,7 @@ Create a FilteredList component that receives a list of objects each containing 
 
 Exercise44
 Add a new Route to the /counter path that renders the Counter component,
+
+
+Exercise45
+Add a new Route to the users/:username path that renders a ShowGithubUser component that receives the username as a path parameter and renders the GithubUser component by passing it the received username.
