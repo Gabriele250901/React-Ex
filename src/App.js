@@ -30,6 +30,7 @@ function App() {
         <Route path="/" element={<Hello />} />
         <Route path="counter" element={<CallBackCounter />} />
         <Route path="users" element={<RouteGitHubUsernameList/>}>
+          <Route index element={<p>Add a user and select it</p>}/>
           <Route path=":username" element={<ShowGitHubUser/>}/>
         </Route>
         <Route
