@@ -14,6 +14,7 @@ import { CallBackCounter } from "./components/exercise42/exercise42";
 import { FilteredList } from "./components/exercise43/exercise43";
 import { Link, Route, Routes } from "react-router-dom";
 import { ShowGitHubUser } from "./components/exercise45/Exercise45";
+import { RouteGitHubUsernameList } from "./components/exercise48/Exercise48";
 
 function App() {
   return (
@@ -21,14 +22,16 @@ function App() {
       <Message />
       <Link to="/counter">Return to counter</Link>
       <hr />
-      <Link to="/users/:username">Insert username</Link>
+      <Link to="users">Print ur username</Link>
       <hr />
       <Link to="/">Home Page</Link>
 
       <Routes>
         <Route path="/" element={<Hello />} />
         <Route path="counter" element={<CallBackCounter />} />
-        <Route path="users/:username" element={<ShowGitHubUser />} />
+        <Route path="users" element={<RouteGitHubUsernameList/>}>
+          <Route path=":username" element={<ShowGitHubUser/>}/>
+        </Route>
         <Route
           path="*"
           element={

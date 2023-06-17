@@ -201,3 +201,6 @@ Add three Links within the main App component and use them to navigate to all th
 
 Exercise47
 Add a Not Found route that renders when a user navigates to a path that does not exist (anche questo si trova in app)
+
+Exercise48
+Add a Route to the users path that shows the GihubUserList component. Modify it so that instead of showing the GithubUser component for each username entered, it shows a link to a nested route that shows the ShowGithubUser component. In doing so, remove the /users/:username route from the App component, and add a new nested route within the /users route.
