@@ -29,6 +29,15 @@ function App() {
         <Route path="/" element={<Hello />} />
         <Route path="counter" element={<CallBackCounter />} />
         <Route path="users/:username" element={<ShowGitHubUser />} />
+        <Route
+          path="*"
+          element={
+            <div>
+              <h1>Page not found</h1>
+              <Link to="/">Return to home page</Link>
+            </div>
+          }
+        />
       </Routes>
     </div>
   );

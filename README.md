@@ -198,3 +198,6 @@ Add a new Route to the users/:username path that renders a ShowGithubUser compon
 
 Exercise46
 Add three Links within the main App component and use them to navigate to all three routes (tutto svolto in app).
+
+Exercise47
+Add a Not Found route that renders when a user navigates to a path that does not exist (anche questo si trova in app)
