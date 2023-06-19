@@ -211,3 +211,6 @@ Add an index route to the GithubUserList route that shows the "Add a user and se
 
 Exercise50
 Modify the useGithubUser custom hook from to use the useSWR hook to fetch the data of a Github user. (il custom hook si trova alla cartella exercise38)
+
+Exercise51
+Modify the useGithubUser hook so that, if the username is null, no request is made.

@@ -20,7 +20,7 @@ function App() {
   return (
     <div>
       <Message />
-      <GitHubUser username="gabriele250901"/>
+      <GitHubUser />
     </div>
   );
 }
