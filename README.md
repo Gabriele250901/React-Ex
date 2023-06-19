@@ -207,3 +207,7 @@ Add a Route to the users path that shows the GihubUserList component. Modify it 
 
 Exercise49
 Add an index route to the GithubUserList route that shows the "Add a user and select it" message.
+
+
+Exercise50
+Modify the useGithubUser custom hook from to use the useSWR hook to fetch the data of a Github user. (il custom hook si trova alla cartella exercise38)

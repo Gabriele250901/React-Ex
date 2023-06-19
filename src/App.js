@@ -20,29 +20,7 @@ function App() {
   return (
     <div>
       <Message />
-      <Link to="/counter">Return to counter</Link>
-      <hr />
-      <Link to="users">Print ur username</Link>
-      <hr />
-      <Link to="/">Home Page</Link>
-
-      <Routes>
-        <Route path="/" element={<Hello />} />
-        <Route path="counter" element={<CallBackCounter />} />
-        <Route path="users" element={<RouteGitHubUsernameList/>}>
-          <Route index element={<p>Add a user and select it</p>}/>
-          <Route path=":username" element={<ShowGitHubUser/>}/>
-        </Route>
-        <Route
-          path="*"
-          element={
-            <div>
-              <h1>Page not found</h1>
-              <Link to="/">Return to home page</Link>
-            </div>
-          }
-        />
-      </Routes>
+      <GitHubUser username="gabriele250901"/>
     </div>
   );
 }
