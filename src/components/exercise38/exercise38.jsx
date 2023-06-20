@@ -2,7 +2,13 @@ import useSWR from 'swr'
 
 const fetcher = url => fetch(url).then(response => response.json())
 export function useGitHubUser(username) {
-  const {data,error,} = useSWR(!username ? null : `https://api.github.com/users/${username}`, fetcher)
+  const {data,error, mutate} = useSWR(!username ? null : `https://api.github.com/users/${username}`, fetcher)
 
-  return { data , error , loading : !data && !error };
+  function fetchGitHubUser(){
+    mutate()
+    
+  }
+
+
+  return { data , error , loading : !data && !error , onFetchUser: fetchGitHubUser};
 }
