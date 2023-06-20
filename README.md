@@ -214,3 +214,6 @@ Modify the useGithubUser custom hook from to use the useSWR hook to fetch the da
 
 Exercise51
 Modify the useGithubUser hook so that, if the username is null, no request is made.
+
+Exercise52
+Modify the useGithubUser hook so that it returns a function to manually refetch the data when invoked.
